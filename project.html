@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project - Cleanora</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #fcfdfe;
+        color: #111827;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 80px;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: 800;
+        color: #3b82f6;
+      }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #4b5563;
+        font-weight: 600;
+        font-size: 15px;
+      }
+      nav a.active {
+        color: #3b82f6;
+      }
+      .login-btn {
+        background: #3b82f6;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 8px;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      /* Project Header */
+      .project-header {
+        text-align: center;
+        padding: 80px 20px 40px;
+      }
+      .badge-blue {
+        background: #eef4ff;
+        color: #3b82f6;
+        padding: 8px 18px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+      .project-header h1 {
+        font-size: 40px;
+        font-weight: 800;
+      }
+
+      .project-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      .project-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid #f1f5f9;
+        transition: transform 0.3s ease;
+        position: relative;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .project-img {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+      }
+
+      .project-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .project-card:hover .project-img img {
+        transform: scale(1.1);
+      }
+
+      .project-info {
+        padding: 25px;
+        background: #ffffff;
+      }
+
+      .project-card.blue-bg .project-info {
+        background-color: #f8fbff;
+      }
+      .project-card.green-bg .project-info {
+        background-color: #f7fff9;
+      }
+
+      .project-category {
+        font-size: 13px;
+        font-weight: 700;
+        color: #3b82f6;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .project-title {
+        font-size: 20px;
+        font-weight: 800;
+        color: #111827;
+        margin-bottom: 15px;
+      }
+
+      .project-link {
+        text-decoration: none;
+        color: #111827;
+        font-weight: 700;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: color 0.3s;
+      }
+
+      .project-link:hover {
+        color: #3b82f6;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .navbar {
+          padding: 20px;
+        }
+        .project-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">Cleanora</div>
+      <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="service.html">Service</a>
+        <a href="project.html" class="active">Project</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <span class="search"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <a href="login.html"><button class="login-btn">Log in</button></a>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="project-header">
+        <span class="badge-blue">Our Project</span>
+        <h1>Latest Cleaning Projects</h1>
+      </section>
+
+      <section class="project-grid">
+        <div class="project-card blue-bg">
+          <div class="project-img">
+            <img
+              src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=800"
+              alt="Office Cleaning"
+            />
+          </div>
+          <div class="project-info">
+            <span class="project-category">Commercial</span>
+            <h3 class="project-title">Corporate Office Deep Clean</h3>
+            <a href="#" class="project-link"
+              >View Details <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="project-card green-bg">
+          <div class="project-img">
+            <img
+              src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800"
+              alt="Home Cleaning"
+            />
+          </div>
+          <div class="project-info">
+            <span class="project-category">Residential</span>
+            <h3 class="project-title">Modern Apartment Sanitization</h3>
+            <a href="#" class="project-link"
+              >View Details <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="project-card blue-bg">
+          <div class="project-img">
+            <img
+              src="https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=800"
+              alt="Kitchen Cleaning"
+            />
+          </div>
+          <div class="project-info">
+            <span class="project-category">Residential</span>
+            <h3 class="project-title">Luxury Villa Kitchen Deep Clean</h3>
+            <a href="#" class="project-link"
+              >View Details <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+      <footer class="main-footer">
+        <div class="footer-container">
+          <div class="footer-col brand-col">
+            <h2 class="footer-logo">Cleanora</h2>
+            <p class="footer-text">
+              Choose a plan that suits your needs — whether it's a one-time deep
+              clean or a regular maintenance schedule.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Service</h4>
+            <ul class="footer-links">
+              <li><a href="#">Strategisk Arbetskraftsplanering</a></li>
+              <li><a href="#">Lärande och Utveckling</a></li>
+              <li><a href="#">Människodata och Talangintelligens</a></li>
+              <li><a href="#">HR-teknik och AI</a></li>
+              <li><a href="#">Talangförvärv</a></li>
+              <li><a href="#">Våra Konsulter</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">About</h4>
+            <ul class="footer-links">
+              <li><a href="#">Om Oss</a></li>
+              <li><a href="#">Våra Konsulter</a></li>
+              <li><a href="#">Kunskapsbank</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Help</h4>
+            <div class="contact-info">
+              <div class="info-item">
+                <i class="fa-regular fa-envelope"></i>
+                <span>team@northboundgroup.se</span>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Stockholm, Sverige</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("Project Page Loaded");
+
+        const cards = document.querySelectorAll(".project-card");
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", () => {
+            card.style.borderColor = "#3b82f6";
+          });
+          card.addEventListener("mouseleave", () => {
+            card.style.borderColor = "#f1f5f9";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
